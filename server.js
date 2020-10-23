@@ -17,6 +17,6 @@ connection.once('open', _ => console.log('Successfully connected to MongoDB data
     .catch(err => console.log(err));
 
 const apiRouter = require('./routes/routes');
-app.use('/', apiRouter)
+app.use('/api', apiRouter)
 
 app.listen(port, _ => console.log(`Server running on ${port}`));
